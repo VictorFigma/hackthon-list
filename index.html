@@ -18,29 +18,31 @@
 <link rel="icon" href="./doc/images/favicon/favicon.ico">
 
 <meta name="theme-color" content="#212529">
+  
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+  /* Style for the tooltip */
+  .tooltiptext {
+      display: none;
+      position: absolute;
+      width: 410px;
+      background-color: #333;
+      color: #fff;
+      text-align: top;
+      border-radius: 6px;
+      padding: 5px;
+      bottom: 105%;
+      left: 50%;
+      margin-left: -105px;
+      z-index: 1000;
+  }
     </style>
   </head>
-
 <body>
     
 <header>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
-      <a href="https://github.com/VictorFigma" class="navbar-brand d-flex align-items-center">
+      <a href="https://www.linkedin.com/in/victorfigma" class="navbar-brand d-flex align-items-center">
         <strong>Victor Figueroa</strong>
       </a>
     </div>
@@ -85,19 +87,19 @@
           </div>
         </div>
         -->
-        
+
         <div class="col">
           <div class="card shadow-sm">
             <img src="./doc/images/schneider_electric.jpg" class="bd-placeholder-img card-img-top" alt="Image Description" width="100%" height="225">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="5" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"> </text></svg>
-
             <div class="card-body">
               <p class="card-text">Schneider Electric - European 2023</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="https://github.com/sperezacuna/schneider-challenge-r1/blob/main/doc/challenge_description.pdf" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Info</a>
                   <a href="https://github.com/sperezacuna/schneider-challenge-r1"  type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Solution</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Stats - ?</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="myButton" onmouseover="showTooltip('<b>My position:</b> Evaluation period did not end.<br><b>Region:</b> Global [focused on Europe].<br><b>Number of Participants:</b> +1000 individuals.<br>')" onmouseout="hideTooltip()">Stats - ?</button>
+                  <div id="myTooltip" class="tooltiptext"></div>
                 </div>
                 <small class="text-muted">November 2023</small>
               </div>
@@ -116,6 +118,8 @@
                 <div class="btn-group">
                   <a href="./doc/challenge_descriptions/oracle_2023_general.pdf" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Info</a>
                   <a href="https://www.linkedin.com/feed/update/urn:li:activity:7113574295171153920/" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">🏆 Award</a>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="myButton" onmouseover="showTooltip('<b>My position:</b> 1st.<br><b>Number of hackathons:</b> 3.<br><b>Judges:</b>  Oracle\'s EMEA technical staff.<br><b>Score:</b> 12.2% higher than 2nd team, 20% over 3rd.<br><b>Number of Participants:</b> half of Spanish universities.')" onmouseout="hideTooltip()">Stats - 🥇</button>
+                  <div id="myTooltip" class="tooltiptext"></div>
                 </div>
                 <small class="text-muted">February - June 2023</small>
               </div>
@@ -134,7 +138,8 @@
                 <div class="btn-group">
                   <a href="./doc/challenge_descriptions/oracle_2023_r3.pdf" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Info</a>
                   <a href="https://github.com/sperezacuna/oracle-challenge-f3" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Solution</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Stats - 🥇</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="myButton" onmouseover="showTooltip('<b>My position:</b> 1st.<br><b>Region:</b> Spain.<br><b>Number of Participants:</b> half of Spanish universities.')" onmouseout="hideTooltip()">Stats - 🥇</button>
+                  <div id="myTooltip" class="tooltiptext"></div>
                 </div>
                 <small class="text-muted">May 2023</small>
               </div>
@@ -153,7 +158,8 @@
                 <div class="btn-group">
                   <a href="./doc/challenge_descriptions/oracle_2023_r2.pdf" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Info</a>
                   <a href="https://github.com/sperezacuna/oracle-challenge-f2" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Solution</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Stats - 🥈</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="myButton" onmouseover="showTooltip('<b>My position:</b> 2nd.<br><b>Region:</b> Spain.<br><b>Number of Participants:</b> half of Spanish universities.')" onmouseout="hideTooltip()">Stats - 🥈</button>
+                  <div id="myTooltip" class="tooltiptext"></div>
                 </div>
                 <small class="text-muted">April 2023</small>
               </div>
@@ -172,7 +178,8 @@
                 <div class="btn-group">
                   <a href="./doc/challenge_descriptions/oracle_2023_r1.pdf" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Info</a>
                   <a href="https://github.com/sperezacuna/oracle-challenge-f1" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Solution</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Stats - 🥇</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="myButton" onmouseover="showTooltip('<b>My position:</b> 1st.<br><b>Region:</b> Spain.<br><b>Number of Participants:</b> half of Spanish universities.')" onmouseout="hideTooltip()">Stats - 🥇</button>
+                  <div id="myTooltip" class="tooltiptext"></div>
                 </div>
                 <small class="text-muted">March 2023</small>
               </div>
@@ -196,5 +203,19 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="./bootstrap.bundle.min.js"></script>
+
+    <script>
+      function showTooltip(content) {
+          var tooltip = event.target.nextElementSibling;
+          tooltip.innerHTML = content;
+          tooltip.style.display = "block";
+      }
+  
+      function hideTooltip() {
+          var tooltip = event.target.nextElementSibling;
+          tooltip.style.display = "none";
+      }
+  </script>
+
   </body>
 </html>
